@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TNSmart Ration Distribution System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            height: 100vh;
+            background: url('geometric-gradient-futuristic-background_23-2149116406.jpg') no-repeat center center/cover;
+        }
+        .sidebar {
+            width: 100px;
+            background: #2c3e50;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+            position: relative;
+        }
+        .profile-icon {
+            width: 60px;
+            height: 60px;
+            background: white;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .profile-icon:hover {
+            background: #1abc9c;
+            color: white;
+        }
+        .dot-menu {
+            width: 12px;
+            height: 12px;
+            background: white;
+            border-radius: 50%;
+            margin: 6px 0;
+            cursor: pointer;
+        }
+        .menu-content {
+            display: none;
+            position: absolute;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            left: 110px;
+            top: 50px;
+            width: 200px;
+            border-radius: 5px;
+            z-index: 100;
+        }
+        .menu-content a {
+            display: block;
+            padding: 12px;
+            text-decoration: none;
+            color: #333;
+            border-bottom: 1px solid #ddd;
+            transition: 0.3s;
+        }
+        .menu-content a:hover {
+            background: #1abc9c;
+            color: white;
+        }
+        .dashboard {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            color: white;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+        }
+        .dashboard h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        .dashboard p {
+            max-width: 700px;
+            text-align: justify;
+            font-size: 18px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .live-update {
+            width: 200px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            border-radius: 5px;
+            margin-left: auto;
+            height: 50%;
+            color: rgb(204, 13, 13);
+            text-align: center;
+        }
+        .live-update h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .live-update p {
+            font-size: 16px;
+        }
+        .profile-buttons {
+            position: absolute;
+            bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        .profile-buttons button {
+            width: 90%;
+            padding: 12px;
+            margin: 6px 0;
+            border: none;
+            background: white;
+            color: #2c3e50;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .profile-buttons button:hover {
+            background: #1abc9c;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="profile-icon" onclick="location.href='profile.html'">P</div>
+        <div class="dot-menu" onclick="toggleMenu()"></div>
+        <div class="dot-menu" onclick="toggleMenu()"></div>
+        <div class="dot-menu" onclick="toggleMenu()"></div>
+        <div class="menu-content" id="menu">
+            <a href="aboutus.html">About</a>
+            <a href="livemonitoring.html">Live Monitoring</a>
+            <a href="purchasedhistory.html">Purchased History</a>
+            <a href="stock.html">Stock Monitoring</a>
+            <a href="settings.html">Settings</a>
+            <a href="#alerts">Alerts</a>
+        </div>
+        <div class="profile-buttons">
+            <a href="front.html" style="color: red;">Logout</a>
+        </div>
+    </div>
+    <div class="dashboard">
+        <h1>Tamil Nadu Ration System</h1>
+        <p>The Smart Ration Distribution System is designed to enhance efficiency, transparency, and security in the distribution of essential commodities such as rice, wheat, sugar, and oil. It utilizes IoT technology for real-time stock monitoring, automated weighing with load cells, and security features like tamper detection. Alerts are triggered for unauthorized access, and notifications are sent to stakeholders via calls and SMS. This automation reduces manual supervision, improves response time, and ensures fair distribution across ration shops.</p>
+    </div>
+    <div class="live-update">
+        <h2>Live Updates</h2>
+        <p>Real-time stock and distribution data</p>
+    </div>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            menu.style.display = menu.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

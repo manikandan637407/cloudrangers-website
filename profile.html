@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - TNSmart Ration System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #121212, #2c3e50);
+            color: white;
+        }
+        .profile-container {
+            width: 380px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: 0.3s;
+        }
+        .profile-container:hover {
+            transform: scale(1.03);
+        }
+        .profile-picture {
+            width: 90px;
+            height: 90px;
+            background: #3498db;
+            border-radius: 50%;
+            margin: 15px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 26px;
+            font-weight: bold;
+            color: white;
+            text-transform: uppercase;
+            box-shadow: 0 0 10px rgba(52, 152, 219, 0.8);
+        }
+        h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        .profile-info {
+            text-align: left;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        .profile-info p {
+            margin: 10px 0;
+            font-size: 16px;
+            padding: 8px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .profile-info p:last-child {
+            border-bottom: none;
+        }
+        .edit-btn, .back-btn {
+            width: 100%;
+            padding: 12px;
+            margin-top: 12px;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .edit-btn {
+            background: #3498db;
+            color: white;
+        }
+        .edit-btn:hover {
+            background: #2980b9;
+            transform: scale(1.05);
+        }
+        .back-btn {
+            background: #2c3e50;
+            color: white;
+        }
+        .back-btn:hover {
+            background: #1a252f;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-container">
+        <div class="profile-picture">JD</div>
+        <h2>User Profile</h2>
+        <div class="profile-info">
+            <p><strong>Name:</strong> John Doe</p>
+            <p><strong>Email:</strong> johndoe@example.com</p>
+            <p><strong>Ration Card No:</strong> 1234-5678-9012</p>
+            <p><strong>Address:</strong> Chennai, Tamil Nadu</p>
+        </div>
+        <button class="edit-btn" onclick="editProfile()">Edit Profile</button>
+        <a href="dashboard.html">
+            <button class="back-btn">Back to Dashboard</button>
+        </a>
+    </div>
+
+    <script>
+        function editProfile() {
+            alert("Edit profile feature coming soon!");
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

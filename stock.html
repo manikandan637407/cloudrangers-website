@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Details - Smart Ration Distribution System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background: url('https://source.unsplash.com/1600x900/?warehouse,storage') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            backdrop-filter: blur(5px);
+        }
+        .container {
+            width: 90%;
+            max-width: 800px;
+            background: rgba(0, 0, 0, 0.85);
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+            transition: 0.3s;
+        }
+        .container:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 1);
+        }
+        h1 {
+            font-size: 24px;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        th {
+            background: rgba(0, 255, 255, 0.2);
+        }
+        tr:hover {
+            background: rgba(0, 255, 255, 0.2);
+        }
+        .back-button {
+            display: block;
+            width: 180px;
+            margin: 20px auto;
+            padding: 12px;
+            background: linear-gradient(90deg, cyan, blue);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+        .back-button:hover {
+            background: linear-gradient(90deg, blue, black);
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Stock Details</h1>
+        <table>
+            <tr>
+                <th>Commodity</th>
+                <th>Available Stock (kg/litres)</th>
+                <th>Last Updated</th>
+            </tr>
+            <tr>
+                <td>Rice</td>
+                <td>5000 kg</td>
+                <td>18 March 2025</td>
+            </tr>
+            <tr>
+                <td>Wheat</td>
+                <td>3000 kg</td>
+                <td>18 March 2025</td>
+            </tr>
+            <tr>
+                <td>Sugar</td>
+                <td>2000 kg</td>
+                <td>18 March 2025</td>
+            </tr>
+            <tr>
+                <td>Oil</td>
+                <td>1000 litres</td>
+                <td>18 March 2025</td>
+            </tr>
+        </table>
+        <a href="dashboard.html" class="back-button">Back to Dashboard</a>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - TNSmart Ration System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background: url('https://source.unsplash.com/1600x900/?technology,dark') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            backdrop-filter: blur(4px);
+        }
+        .settings-container {
+            width: 400px;
+            background: rgba(0, 0, 0, 0.85);
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+            transition: 0.3s;
+        }
+        .settings-container:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 1);
+        }
+        .settings-container h2 {
+            margin-bottom: 20px;
+            font-size: 22px;
+            letter-spacing: 1px;
+        }
+        .settings-option {
+            text-align: left;
+            margin-bottom: 15px;
+        }
+        .settings-option label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        .settings-option select,
+        .settings-option input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            font-size: 16px;
+            outline: none;
+            transition: 0.3s;
+        }
+        .settings-option select:hover,
+        .settings-option input:hover {
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+        }
+        .toggle-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .toggle-container input {
+            width: auto;
+        }
+        .save-btn, .back-btn {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        .save-btn {
+            background: linear-gradient(90deg, cyan, blue);
+            color: white;
+        }
+        .save-btn:hover {
+            background: linear-gradient(90deg, blue, black);
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+            transform: scale(1.05);
+        }
+        .back-btn {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+        .back-btn:hover {
+            background: rgba(255, 255, 255, 0.4);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="settings-container">
+        <h2>Settings</h2>
+        
+        <div class="settings-option">
+            <label for="language">Preferred Language:</label>
+            <select id="language">
+                <option value="english">English</option>
+                <option value="tamil">தமிழ் (Tamil)</option>
+                <option value="hindi">हिन्दी (Hindi)</option>
+            </select>
+        </div>
+
+        <div class="settings-option toggle-container">
+            <label for="notifications">Enable Notifications:</label>
+            <input type="checkbox" id="notifications" checked>
+        </div>
+
+        <div class="settings-option toggle-container">
+            <label for="sms-alerts">Enable SMS Alerts:</label>
+            <input type="checkbox" id="sms-alerts" checked>
+        </div>
+
+        <button class="save-btn" onclick="saveSettings()">Save Changes</button>
+        <a href="dashboard.html" class="back-btn">Back to Dashboard</a>
+    </div>
+
+    <script>
+        function saveSettings() {
+            alert("Settings saved successfully!");
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

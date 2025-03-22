@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Monitoring - Smart Ration System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #121212, #222222);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .container {
+            width: 90%;
+            max-width: 500px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        .stock-item {
+            font-size: 18px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        .stock-item span {
+            font-weight: bold;
+        }
+        .status {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 8px;
+            background: green;
+            color: white;
+            display: inline-block;
+            transition: 0.3s;
+        }
+        .alert {
+            background: red !important;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 20px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .back-btn:hover {
+            background: #0056b3;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Live Monitoring</h2>
+        <div class="stock-item">Rice Stock: <span id="rice">Loading...</span> kg</div>
+        <div class="stock-item">Wheat Stock: <span id="wheat">Loading...</span> kg</div>
+        <div class="stock-item">Sugar Stock: <span id="sugar">Loading...</span> kg</div>
+        <div class="stock-item">Oil Stock: <span id="oil">Loading...</span> L</div>
+        <p class="status" id="status">Normal</p>
+        <a href="dashboard.html" class="back-btn">Back to Dashboard</a>
+    </div>
+
+    <script>
+        function getRandomStock(min, max) {
+            return (Math.random() * (max - min) + min).toFixed(2);
+        }
+
+        function updateData() {
+            document.getElementById("rice").innerText = getRandomStock(50, 200) + " kg";
+            document.getElementById("wheat").innerText = getRandomStock(30, 150) + " kg";
+            document.getElementById("sugar").innerText = getRandomStock(20, 100) + " kg";
+            document.getElementById("oil").innerText = getRandomStock(10, 50) + " L";
+            
+            let statusElem = document.getElementById("status");
+            let alertTriggered = Math.random() < 0.2; // 20% chance of an alert
+            if (alertTriggered) {
+                statusElem.innerText = "Alert! Unauthorized Access Detected";
+                statusElem.classList.add("alert");
+            } else {
+                statusElem.innerText = "Normal";
+                statusElem.classList.remove("alert");
+            }
+        }
+
+        setInterval(updateData, 5000); // Refresh every 5 seconds
+        updateData();
+    </script>
+</body>
+</html>
